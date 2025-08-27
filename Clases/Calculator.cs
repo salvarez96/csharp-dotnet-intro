@@ -5,26 +5,31 @@ namespace Operations
     public void Sum(int num1, int num2)
     {
       int res = num1 + num2;
-      Console.WriteLine($"La suma de los números {num1} y {num2} de sum es {res}");
+      OperationResult("suma", res);
     }
 
     public void Rest(int num1, int num2)
     {
       int res = num1 - num2;
-      Console.WriteLine($"La resta de los números {num1} y {num2} de rest es {res}");
+      OperationResult("resta", res);
     }
 
     public void Multiply(int num1, int num2)
     {
       int res = num1 * num2;
-      Console.WriteLine($"La multiplicación de los números {num1} y {num2} de multiply es {res}");
+      OperationResult("multiplicación", res);
     }
 
     public void Divide(int num1, int num2)
     {
       int res = num1 / num2;
       int remainder = num1 % num2;
-      Console.WriteLine($"La division de los números {num1} y {num2} de divide es {res} y sobra {remainder}");
+      OperationResult("", res, $"La division de los números {num1} y {num2} es {res} y sobra {remainder}");
+    }
+
+    private string OperationResult(string operationType, int result, string? customMessage = null)
+    {
+      return customMessage ?? $"El resultado de la operación {operationType} es {result}";
     }
   }
 }
