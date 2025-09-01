@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "depuración launch",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-debugging",
+      "program": "${workspaceFolder}/Debugging/bin/debug/net8.0/Debugging.dll",
+      "cwd": "${workspaceFolder}/Debugging",
+      "console": "internalConsole"
+    },
+    {
+      "name": "depuración clases",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-clases",
+      "program": "${workspaceFolder}/Clases/bin/Debug/net8.0/Clases.dll",
+      "cwd": "${workspaceFolder}/Clases",
+      "console": "internalConsole"
+    }
+  ]
+}
